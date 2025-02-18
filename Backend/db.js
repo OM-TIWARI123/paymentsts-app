@@ -1,6 +1,8 @@
+const dotenv=require('dotenv')
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://omtiwari:OMTIWARi%40123@cluster0.wjckru4.mongodb.net/')
+mongoose.connect(process.env.DATABASE_URL)
+console.log('connected db')
 
 // Create a Schema for Users
 const userSchema = new mongoose.Schema({
